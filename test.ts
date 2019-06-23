@@ -1,0 +1,1 @@
+let testTypescript: string = "Hi";
