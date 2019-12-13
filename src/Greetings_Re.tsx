@@ -1,23 +1,27 @@
 import React from 'react';
 
-type Greeting = {
+type GreetingsProps = {
     name: string;
     mark: string;
     optional?: string;
     onClick: (name: string) => void;
 }
 
-function Greetings({name,mark,optional,onClick}: Greeting){
-
+function Greetings({ name, mark, optional, onClick}: GreetingsProps) {
     const handleClick = () => onClick(name);
-
     return (
         <div>
-            Welcome {name} {mark}
+            Hello, {name} {mark}
             {optional && <p>{optional}</p>}
-            <button onClick={handleClick}>버튼</button>
+            <div>
+                <button onClick={handleClick}>클릭</button>
+            </div>
         </div>
     )
+}
+
+Greetings.defaultProps = {
+    mark: '!'
 }
 
 export default Greetings;
