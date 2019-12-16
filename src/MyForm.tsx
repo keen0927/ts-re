@@ -23,7 +23,7 @@ const MyForm = ({ onSubmit }: MyFormProps) => {
         })
     };
 
-    const handleSubmit = (Ce: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         onSubmit(form);
         setForm({
