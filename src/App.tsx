@@ -1,6 +1,7 @@
 import * as React from 'react';
 // import Greetings from "./Greetings";
-import Counter from "./Counter";
+// import Counter from "./Counter";
+import MyForm from './MyForm';
 
 // const App = () => {
 //
@@ -16,9 +17,15 @@ const App = () => {
     //     console.log(name);
     // }
     // return <Greetings name={`keen`} mark={`hi`} onClick={onClick}/>
+
+    const onSubmit = (form: {name: string; description: string}) => {
+        console.log(form);
+    };
+
     return (
         <div>
-            <Counter/>
+            {/*<Counter/>*/}
+            <MyForm onSubmit={onSubmit} />
         </div>
     )
 }
